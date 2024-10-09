@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envelope Animation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="circle-container">
+            <div class="circle">
+                <div class="center-text">T</div>
+            </div>
+        </div>
+        <div class="envelope-wrapper">
+            <div class="envelope">
+                <div class="letter">
+                    <div class="text">
+                        <strong>HAPPY BIRTHDAY :></strong>
+                        <p>
+                            Chúc ông sẽ có thật nhiều sức khỏe để làm mọi việc thật suôn sẻ, học thật là giỏi để kiếm thật nhiều tiền và đặc biệt là có thật nhiều may mắn nhé!!!
+                            <br>
+                            &#160;&#160;&#160;&#160;Mãi thương,
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const envelope = document.querySelector('.envelope-wrapper');
+        const circleContainer = document.querySelector('.circle-container');
+        circleContainer.addEventListener('click', (event) => {
+            event.stopPropagation();
+            envelope.classList.toggle('flap');
+            circleContainer.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
